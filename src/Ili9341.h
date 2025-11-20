@@ -7,8 +7,6 @@
 
 // Public globals mirroring original externs 
 extern volatile uint16_t* imageBuffer;        // Framebuffer: PIX_WIDTH x PIX_HEIGHT, RGB565 big-endian 
-extern uint32_t g_bmp_width;                  // Optional bitmap width provided elsewhere 
-extern uint32_t g_bmp_height;                 // Optional bitmap height provided elsewhere 
 
 // Initialize framebuffer allocation 
 void init_imageBuffer(void);
