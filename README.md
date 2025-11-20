@@ -5,6 +5,8 @@ Fork for the RPIPicoTFT2.4 (TFT ILI9341) with image buffers in C
   
 I ran the following code on the RP2350B (RP Pico 2)  
 
+For an implementation in C++ - check out [RPPicoTFT-ILI9341-ImageBuffer-CPP](https://github.com/AaryanPanigrahi/RPPicoTFT-ILI9341-ImageBuffer-CPP)
+
 ## Usage
 ### Writing to the buffer  
 While old funcionality is the same as the library linked above, I added the convinience of writing pixels directly to the buffer  
@@ -12,9 +14,12 @@ While old funcionality is the same as the library linked above, I added the conv
 for a uint16_t - RGB565 colour value   
 __**PIX(x,y)**__ = colour  
 
-Added **setScreenColour** that updates the entire screen to 'colour'
+Added "**ILI9341_setScreenColour**" that updates the entire screen to 'colour'
 
 ## Changes  
+- Instead of the class header "__ILI9341__", added a suffix "**ILI9341_**" to funtion names  
+    All the class parameters are accessible through static global variables instead  
+  
 - Writes to an image buffer instead of the TFT directly to increase flexibility of use   
     "Overwriting" a spot on the TFT glitched it out. A tft->clear then re-writing the same data was a waste of computation  
   
